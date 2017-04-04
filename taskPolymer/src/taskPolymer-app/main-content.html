@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="libraries/get-posts.html">
+<link rel="import" href="items-loop.html">
+<dom-module id="main-content">
+    <template>
+        <get-posts collection="{{collection}}"></get-posts>
+        <items-loop collection="{{collection}}"></items-loop>
+    </template>
+  <script>
+    Polymer({
+        is: 'main-content',
+        properties: {
+            collection: {
+                type: Array,
+                value: function(){
+                    return[];
+                },
+            },
+        },
+        observers:[
+            "collectionChanged(collection.*)"
+        ],
+        collectionChanged: function(){
+            console.log(this.collection);
+        }
+    });
+  </script>
+</dom-module>

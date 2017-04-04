@@ -1,0 +1,6 @@
+{
+  "name": "taskPolymer",
+  "short_name": "taskPolymer",
+  "start_url": "/",
+  "display": "standalone"
+}

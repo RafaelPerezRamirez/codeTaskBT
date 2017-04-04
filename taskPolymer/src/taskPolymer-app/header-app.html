@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<dom-module id="header-app">
+    <template>
+        <style is="custom-style">
+            app-toolbar {
+                background-color: #4285f4;
+                color: #fff;
+            }
+            paper-icon-button {
+                --paper-icon-button-ink-color: white;
+            }
+            paper-icon-button + [main-title] {
+                margin-left: 24px;
+            }
+        </style>
+        <app-header reveals>
+            <app-toolbar>
+                <div main-title>My app</div>
+                <paper-icon-button icon="search"></paper-icon-button>
+                <paper-icon-button icon="close"></paper-icon-button>
+            </app-toolbar>
+        </app-header>
+    </template>
+    <script>
+        Polymer({
+        is: 'header-app',
+        });
+    </script>
+</dom-module>

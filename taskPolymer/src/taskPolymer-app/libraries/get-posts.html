@@ -1,0 +1,24 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
+<dom-module id="get-posts">
+    <template>
+        <iron-ajax id="xhr" auto url="http://jsonplaceholder.typicode.com/posts" handle-as="json" last-response="{{ajaxResponse}}" on-response="handleResponse" on-error="handleError" last-response="{{ajaxResponse}}"></iron-ajax>
+    </template>
+    <script>
+    Polymer({
+        is: 'get-posts',
+        properties: {
+            collection: {
+                type: Array,
+                notify: true,
+            },
+        },
+        handleResponse: function(data){
+            this.push("collection", data);
+        },
+        handleError: function(data) {
+            console.log(data.detail);
+        }
+    });
+    </script>
+</dom-module>

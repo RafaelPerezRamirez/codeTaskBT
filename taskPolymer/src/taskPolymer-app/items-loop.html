@@ -1,0 +1,21 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="items-loop">
+    <template>
+
+        <template is="dom-repeat" items="{{collection}}" as="code">
+            <div class="item">
+                <div class="id-item">
+                    {{code.id}}
+                </div>
+            </div>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'items-loop',
+            properties: {
+                collection: Array
+            },
+        });
+    </script>
+</dom-module>
