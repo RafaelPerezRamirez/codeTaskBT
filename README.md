@@ -46,3 +46,6 @@ npm install -g polymer-cli
 
 Una vez completados estos pasos el proyecto se podra visualizar
 en el puerto que indique la consola
+
+Aqui hay una liga para instalar los pasos 1 - 4 todo por consola
+https://medium.com/code-kings/polymer-1-how-to-install-using-bower-how-to-download-the-polymer-elements-in-one-shot-473427ca9225
