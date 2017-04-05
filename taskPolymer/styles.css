@@ -5,3 +5,12 @@
 	text-decoration:none;
 	box-sizing:border-box;
 }
+body{
+	background: #cfd8dc;
+}
+.paper-input-container-0{
+	padding: 0px 0!important;
+}
+.paper-input-container-0 .focused-line.paper-input-container{
+	border-bottom: 2px solid #4285f4!important;
+}

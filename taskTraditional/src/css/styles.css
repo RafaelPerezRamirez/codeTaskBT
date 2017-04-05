@@ -1,0 +1,202 @@
+*{
+	margin:0px;
+	padding:0px;
+	color:inherit;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+body{
+	background: #cfd8dc;
+	position: relative;
+}
+.header-main{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+}
+.menu-layout{
+	color: white;
+	background: #4285f4;
+	padding: 0px 17px;
+	line-height: 64px;
+	position: relative;
+}
+.content-loop {
+    padding-top: 150px;
+    width: 80%;
+    margin: 0 auto;
+}
+.item-loop {
+    width: 32.5%;
+    background: white;
+    display: inline-block;
+    vertical-align: top;
+	margin-right: 1%;
+	margin-bottom: 20px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+	cursor: pointer;
+	-webkittransition: .5s ease;
+    -moz-transition: .5s ease;
+    transition: .5s ease;
+}
+.item-loop:hover{
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	transform: scale(1.05);
+}
+.item-loop:nth-child(3n) {
+    margin-right: 0%;
+}
+.item-name{
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: rgba(0,0,0,0.87);
+	margin-bottom: 15px;
+	padding: 15px;
+	min-height: 78px;
+}
+.item-content{
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: rgba(0,0,0,0.54);
+	line-height: 17px;
+}
+input.input-found {
+    width: 100%;
+    line-height: 45px;
+    text-indent: 15px;
+    font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	display: none;
+}
+.title-menu{
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 100;
+}
+.pointer{
+	cursor: pointer;
+}
+.button-header {
+    line-height: 23px;
+}
+.hidden{
+	display: none;
+}
+.icon-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+}
+.icon-buttons i{
+	font-size: 17px;
+}
+.inline{
+	display: inline-block;
+}
+.middle{
+	vertical-align: middle;
+}
+.image-fancy{
+	background-image: url('https://graphicflip.com/wp-content/uploads/2016/02/40-backgrounds-material.jpg');
+	background-size: cover;
+	width: 140px;
+	height: 140px;
+	border-radius: 100%;
+}
+.image-loop{
+	background-image: url('https://graphicflip.com/wp-content/uploads/2016/02/40-backgrounds-material.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 130px;
+}
+.fancy-comments {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(199, 211, 214, 0.8);
+	opacity: 0;
+	pointer-events: none;
+	-webkittransition: .5s ease;
+    -moz-transition: .5s ease;
+    transition: .5s ease;
+}
+.fancy-visible{
+	opacity: 1;
+	pointer-events: all;
+}
+.main-fancy-content {
+    width: 75%;
+    margin: 0 auto;
+    background: white;
+	height: 100vh;
+	padding-top: 100px;
+	z-index: 100000;
+}
+.close-fancy{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.header-fancy, .content-comments{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+.content-comments{
+	overflow: auto;
+	margin-top: 70px;
+	height: 400px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+}
+.content-body{
+	text-align: left;
+	margin-left: 30px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	color: rgba(0,0,0,0.98);
+	width: 60%;
+	line-height: 26px;
+	font-weight: 400;
+}
+.comment-loop>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.header-comments{
+	background: whitesmoke;
+}
+.header-comments>div{
+	font-family: "Roboto", sans-serif;
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.639216);
+	padding: 18px 0px;
+	border-top: solid 1px #d8d8d8;
+	border-bottom: solid 1px #d8d8d8;
+}
+.comment-loop{
+	border-bottom: solid 1px #ebebeb;
+	padding: 25px 15px;
+}
+.comment-loop>div{
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.639216);
+}
+.comments-header-id, .comment-id{
+    width: 20%;
+}
+.comments-header-title, .comment-title{
+    width: 30%;
+}
+.comments-header-body, .comment-body{
+    width: 50%;
+}

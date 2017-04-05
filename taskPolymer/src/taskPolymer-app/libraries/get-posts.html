@@ -2,20 +2,36 @@
 <link rel="import" href="../../../bower_components/iron-ajax/iron-ajax.html">
 <dom-module id="get-posts">
     <template>
-        <iron-ajax id="xhr" auto url="http://jsonplaceholder.typicode.com/posts" handle-as="json" last-response="{{ajaxResponse}}" on-response="handleResponse" on-error="handleError" last-response="{{ajaxResponse}}"></iron-ajax>
+        <iron-ajax id="xhr" auto url="http://jsonplaceholder.typicode.com/posts" handle-as="json" on-response="handleResponse" on-error="handleError"></iron-ajax>
     </template>
     <script>
     Polymer({
         is: 'get-posts',
         properties: {
+            /*
+            * @var {Array} collection
+            */
             collection: {
                 type: Array,
-                notify: true,
+                reflectToAttribute: true,
+                notify: true
             },
         },
-        handleResponse: function(data){
-            this.push("collection", data);
+        /**
+         * Define empty array
+         */
+        attached: function () {
+            this.collection = [];
         },
+        /**
+         * Informs success response
+         */
+        handleResponse: function (data) {
+            this.collection = data.detail.response;
+        },
+        /**
+         * Informs success fail
+         */
         handleError: function(data) {
             console.log(data.detail);
         }

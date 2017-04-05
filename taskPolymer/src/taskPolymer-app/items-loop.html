@@ -1,21 +1,37 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/poly-filter/poly-filter.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+<link rel="import" href="libraries/get-posts.html">
+<link rel="import" href="item-list.html">
 <dom-module id="items-loop">
     <template>
-
-        <template is="dom-repeat" items="{{collection}}" as="code">
-            <div class="item">
-                <div class="id-item">
-                    {{code.id}}
-                </div>
-            </div>
-        </template>
+        <style include="iron-flex iron-flex-alignment">
+            :host {
+                display: block;
+            }
+            .content-loop {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 50px;
+            }
+            paper-input{
+                background: white;
+                text-indent: 17px;
+                display: none;
+            }
+        </style>
+        <get-posts collection="{{collection}}"></get-posts>
+        <app-localstorage-document key="polymer.collection" data="{{collection}}">
+        </app-localstorage-document>
+        <poly-filter array-to-filter="[[collection]]" filter="[[filterString]]" filtered-array="{{filteredCollection}}" logical-or="or"></poly-filter>
+        <paper-input label="Busqueda" id="description" value="{{filterString::input}}"></paper-input>
+        <div class="content-loop">
+            <item-list items="[[filteredCollection]]"></item-list>
+        </div>
     </template>
     <script>
         Polymer({
             is: 'items-loop',
-            properties: {
-                collection: Array
-            },
         });
     </script>
 </dom-module>
